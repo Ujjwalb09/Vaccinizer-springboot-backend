@@ -2,10 +2,7 @@ package com.example.Vaccinizer.model;
 
 import com.example.Vaccinizer.Enum.Gender;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.ArrayList;
@@ -17,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE) //will make all attributes as private. so we don't have to write private in front of all attributes.
 @Table(name="user") //annotation used to specify table name in database
+@Builder //annotation used to create object of the class
 public class User {
 
     @Id //annotation used to define that this attribute will become primary key in the table
