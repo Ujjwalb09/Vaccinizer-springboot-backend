@@ -25,4 +25,11 @@ public class VaccinationCenterController {
         CenterResponseDto centerResponseDto = vaccinationCenterService.addCenter(centerRequestDto);
         return new ResponseEntity<>(centerResponseDto, HttpStatus.CREATED);
     }
+
+    //give the list of all doctor at particular center(centerId)
+    //give the list of all male doctor at particular center(centerId)
+    //give the list of all female doctor at particular center(centerId)
+    //all male dr above age 40
+    //give all center of a particular center type
+
 }

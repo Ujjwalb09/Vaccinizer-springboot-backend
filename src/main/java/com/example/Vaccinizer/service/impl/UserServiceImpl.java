@@ -96,21 +96,21 @@ public class UserServiceImpl implements UserService {
     public List<NoDoseResponseDto> noDose() {
 
         List<User> allUser = userRepository.findAll();
-        List<NoDoseResponseDto> noDose = new ArrayList<>();
+        List<NoDoseResponseDto> noDose1 = new ArrayList<>();
 
         for(User user : allUser)
         {
-            if(user.isDose1Taken() == false && user.isDose2Taken() == false)
+            if(!user.isDose1Taken() && !user.isDose2Taken())
             {
                 NoDoseResponseDto noDoseResponseDto = new NoDoseResponseDto();
                 noDoseResponseDto.setName(user.getName());
                 noDoseResponseDto.setAge((user.getAge()));
                 noDoseResponseDto.setMobNo((user.getMobNo()));
                 noDoseResponseDto.setEmailId(user.getEmailId());
-                noDose.add(noDoseResponseDto);
+                noDose1.add(noDoseResponseDto);
             }
         }
 
-        return noDose;
+        return noDose1;
     }
 }

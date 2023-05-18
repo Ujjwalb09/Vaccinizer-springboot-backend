@@ -2,10 +2,7 @@ package com.example.Vaccinizer.dto.ResponseDTO;
 
 import com.example.Vaccinizer.Enum.DoseNo;
 import com.example.Vaccinizer.Enum.VaccineType;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
@@ -15,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Builder
 public class AppointmentResponseDto {
 
     String userName;
